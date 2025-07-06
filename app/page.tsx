@@ -386,18 +386,6 @@ export default function LandingPage() {
                   <span className="text-secondary-600">Roster</span>
                   <span className="font-semibold text-secondary-800">1%</span>
                 </div>
-                <Button
-                  variant="outline"
-                  className="w-full mt-4 border-secondary-300 text-secondary-700 hover:bg-secondary-50 bg-transparent"
-                  onClick={() =>
-                    window.open(
-                      "https://public.tableau.com/views/HablemosDePlata-RemuneracionesenIngenieraJUN25/Anlisisgeneral?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
-                      "_blank",
-                    )
-                  }
-                >
-                  Ver Detalles <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
               </CardContent>
             </Card>
 
@@ -425,18 +413,6 @@ export default function LandingPage() {
                     <span className="text-secondary-800 font-semibold text-sm w-12 text-right">{item.percentage}%</span>
                   </div>
                 ))}
-                <Button
-                  variant="outline"
-                  className="w-full mt-4 border-secondary-300 text-secondary-700 hover:bg-secondary-50 bg-transparent"
-                  onClick={() =>
-                    window.open(
-                      "https://public.tableau.com/views/HablemosDePlata-RemuneracionesenIngenieraJUN25/SesgosdeGnero?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
-                      "_blank",
-                    )
-                  }
-                >
-                  Ver Análisis Completo <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
               </CardContent>
             </Card>
           </div>
@@ -504,7 +480,7 @@ export default function LandingPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="flex items-center gap-4 text-xs mb-4">
+                  <div className="flex flex-wrap items-center gap-4 text-xs mb-4">
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-sm bg-secondary-100"></div>
                       <span>Inicial</span>
@@ -571,27 +547,17 @@ export default function LandingPage() {
                   <CardTitle className="text-secondary-800">Distribución Geográfica</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  {[
-                    { region: "CABA", porcentaje: 45.2 },
-                    { region: "GBA", porcentaje: 32.8 },
-                    { region: "Córdoba", porcentaje: 8.1 },
-                    { region: "Santa Fe", porcentaje: 5.9 },
-                    { region: "Mendoza", porcentaje: 3.4 },
-                    { region: "Otras", porcentaje: 4.6 },
-                  ].map((item) => (
-                    <div key={item.region} className="flex items-center gap-3">
-                      <span className="text-secondary-600 text-sm font-medium w-20 flex-shrink-0">{item.region}</span>
-                      <div className="flex-1 bg-secondary-100 rounded-full h-2">
-                        <div
-                          className="bg-gradient-to-r from-primary-500 to-primary-600 h-full rounded-full"
-                          style={{ width: `${item.porcentaje}%` }}
-                        />
-                      </div>
-                      <span className="text-secondary-800 font-semibold text-sm w-12 text-right">
-                        {item.porcentaje}%
-                      </span>
+                  <div className="flex justify-center">
+                    <div className="w-full max-w-3xl h-[600px] bg-secondary-50 rounded-lg shadow-lg border border-secondary-200 flex items-center justify-center">
+                      <iframe
+                        src="/mapa_interactivo.html"
+                        title="Mapa Interactivo de Argentina y Malvinas"
+                        className="w-full h-full rounded-lg border-0"
+                        style={{ background: 'transparent', minHeight: 500 }}
+                        allowFullScreen
+                      />
                     </div>
-                  ))}
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -611,59 +577,62 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8 mb-8">
+            <div className="container mx-auto max-w-7xl mb-8">
               <Card className="lg:col-span-2 border-secondary-200">
                 <CardHeader>
-                  <CardTitle className="text-secondary-800">Evolución Salarial por Experiencia</CardTitle>
-                  <CardDescription>Mediana de salarios según años de experiencia</CardDescription>
+                  <CardTitle className="text-secondary-800">Evolución Salarial por Seniority</CardTitle>
+                  <CardDescription>Mediana de salarios según seniority</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-6">
-                    {[
-                      { experiencia: "0-1 años", salario: 850, color: "from-red-400 to-red-500" },
-                      { experiencia: "2-3 años", salario: 1200, color: "from-orange-400 to-orange-500" },
-                      { experiencia: "4-5 años", salario: 1600, color: "from-yellow-400 to-yellow-500" },
-                      { experiencia: "6-8 años", salario: 2100, color: "from-green-400 to-green-500" },
-                      { experiencia: "9+ años", salario: 2800, color: "from-blue-400 to-blue-500" },
-                    ].map((item) => (
-                      <div key={item.experiencia} className="space-y-2">
-                        <div className="flex justify-between items-center">
-                          <span className="text-secondary-700 font-medium">{item.experiencia}</span>
-                          <span className="text-secondary-800 font-bold">${item.salario}K</span>
-                        </div>
-                        <div className="w-full bg-secondary-100 rounded-full h-3">
-                          <div
-                            className={`bg-gradient-to-r ${item.color} h-full rounded-full transition-all duration-700`}
-                            style={{ width: `${(item.salario / 2800) * 100}%` }}
-                          />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-secondary-200">
-                <CardHeader>
-                  <CardTitle className="text-secondary-800">Factores de Impacto</CardTitle>
-                  <CardDescription>Variables que más influyen en el salario</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-center justify-between p-3 bg-secondary-50 rounded-lg">
-                    <span className="text-secondary-700 font-medium">Experiencia</span>
-                    <Badge className="bg-secondary-600 text-white">+85%</Badge>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-secondary-50 rounded-lg">
-                    <span className="text-secondary-700 font-medium">Especialidad</span>
-                    <Badge className="bg-secondary-600 text-white">+45%</Badge>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-secondary-50 rounded-lg">
-                    <span className="text-secondary-700 font-medium">Ubicación</span>
-                    <Badge className="bg-secondary-600 text-white">+35%</Badge>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-secondary-50 rounded-lg">
-                    <span className="text-secondary-700 font-medium">Tipo de empresa</span>
-                    <Badge className="bg-secondary-600 text-white">+25%</Badge>
+                  <div className="overflow-x-auto">
+                    <table className="min-w-[700px] w-full border-collapse text-sm text-center font-sans bg-white rounded-lg shadow-md border border-secondary-200">
+                      <thead className="bg-gradient-to-r from-primary-50 to-secondary-50">
+                        <tr>
+                          <th rowSpan={2} className="border border-secondary-200 px-3 py-2 text-secondary-800 font-semibold bg-white">Seniority</th>
+                          <th colSpan={10} className="border border-secondary-200 px-3 py-2 text-secondary-800 font-semibold bg-white">Ingeniería estudiada</th>
+                        </tr>
+                        <tr>
+                          {[
+                            "Ambiental", "Civil", "Eléctrica", "Electromecánica",
+                            "Electrónica", "Industrial", "Mecánica",
+                            "Química", "Sistemas", "Otras"
+                          ].map((nombre) => (
+                            <th key={nombre} className="border border-secondary-200 px-3 py-2 text-secondary-700 font-medium bg-white">{nombre}</th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {[
+                          {
+                            nivel: "Junior",
+                            valores: [700000, 1084200, 3000000, 1865000, 830000, 681000, 1000000, 907700, 1100000, 1300000],
+                          },
+                          {
+                            nivel: "Semi-senior",
+                            valores: [1050000, 1245000, 2300000, 1700000, 2000000, 2100000, 1800000, 1900000, 1700000, 700000],
+                          },
+                          {
+                            nivel: "Senior",
+                            valores: [1400000, 1700000, 2800000, 2000000, 4000000, 2500000, 2300000, 2900000, 4250000, 1500000],
+                          },
+                          {
+                            nivel: "Líder/Manager",
+                            valores: [null, 2242500, 2000000, 2100000, 1250000, 2700000, 2850000, 2100000, 3000000, null],
+                          },
+                          {
+                            nivel: "Gerencial",
+                            valores: [null, null, 2300000, null, null, 2200000, 5000000, null, null, null],
+                          }
+                        ].map(({ nivel, valores }, rowIdx) => (
+                          <tr key={nivel} className={rowIdx % 2 === 0 ? "bg-secondary-50" : "bg-white"}>
+                            <td className="border border-secondary-200 px-3 py-1 font-medium text-secondary-800">{nivel}</td>
+                            {valores.map((v, idx) => (
+                              <td key={idx} className="border border-secondary-200 px-3 py-1 text-secondary-700">{v ? v.toLocaleString("es-AR") : "-"}</td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
                   </div>
                 </CardContent>
               </Card>
@@ -674,95 +643,24 @@ export default function LandingPage() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h5 className="font-semibold text-secondary-700 mb-2">Brecha Salarial por Género</h5>
-                  <p className="text-secondary-600 text-sm">
-                    Las mujeres ganan en promedio un 15% menos que los hombres en posiciones equivalentes, brecha que se
-                    amplía en niveles gerenciales.
-                  </p>
+                  <p className="text-secondary-600 text-sm mb-4">
+                    En casi el 100% de los casos encuestados, las mujeres ganan menos que los hombres en posiciones equivalentes. 
+                  </p>                 
                 </div>
-                <div>
-                  <h5 className="font-semibold text-secondary-700 mb-2">Impacto de la Modalidad</h5>
-                  <p className="text-secondary-600 text-sm">
-                    Los trabajos remotos e híbridos muestran salarios 12% superiores en promedio, especialmente en el
-                    sector tecnológico.
-                  </p>
-                </div>
+                <Button
+                  size="lg"
+                  className="bg-primary-500 text-secondary-800 hover:bg-primary-600 font-semibold"
+                  onClick={() =>
+                    window.open(
+                      "https://public.tableau.com/views/HablemosDePlata-RemuneracionesenIngenieraJUN25/SesgosdeGnero?:language=es-ES&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+                      "_blank",
+                    )
+                  }
+                >
+                  <ExternalLink className="w-5 h-5 mr-2" />
+                  Ver Análisis Dinámico
+                </Button>                 
               </div>
-            </div>
-          </div>
-
-          <Separator className="my-16" />
-
-          {/* Análisis de Contratos */}
-          <div className="mb-20">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-secondary-500 rounded-lg flex items-center justify-center">
-                <Award className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-secondary-800">Tipos de Contrato y Beneficios</h3>
-                <p className="text-secondary-600">Condiciones laborales en el sector</p>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="border-secondary-200">
-                <CardHeader>
-                  <CardTitle className="text-secondary-800">Tipos de Contrato</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  {[
-                    { tipo: "Relación de dependencia", porcentaje: 68.5, salario: "$1,580K" },
-                    { tipo: "Monotributo", porcentaje: 18.2, salario: "$1,420K" },
-                    { tipo: "Responsable inscripto", porcentaje: 8.9, salario: "$2,100K" },
-                    { tipo: "Cooperativa de trabajo", porcentaje: 4.4, salario: "$1,200K" },
-                  ].map((item) => (
-                    <div key={item.tipo} className="p-4 border border-secondary-200 rounded-lg">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="font-medium text-secondary-800">{item.tipo}</span>
-                        <span className="text-sm font-semibold text-secondary-600">{item.porcentaje}%</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <div className="w-full bg-secondary-100 rounded-full h-2 mr-3">
-                          <div
-                            className="bg-gradient-to-r from-secondary-500 to-secondary-600 h-full rounded-full"
-                            style={{ width: `${item.porcentaje}%` }}
-                          />
-                        </div>
-                        <span className="text-sm font-bold text-secondary-800 whitespace-nowrap">{item.salario}</span>
-                      </div>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
-
-              <Card className="border-secondary-200">
-                <CardHeader>
-                  <CardTitle className="text-secondary-800">Beneficios Más Valorados</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3">
-                  {[
-                    { beneficio: "Obra social premium", valoracion: 92 },
-                    { beneficio: "Flexibilidad horaria", valoracion: 89 },
-                    { beneficio: "Capacitación y desarrollo", valoracion: 85 },
-                    { beneficio: "Home office", valoracion: 82 },
-                    { beneficio: "Vacaciones adicionales", valoracion: 78 },
-                    { beneficio: "Bonos por objetivos", valoracion: 75 },
-                  ].map((item) => (
-                    <div key={item.beneficio} className="flex items-center gap-3">
-                      <span className="text-secondary-600 text-sm font-medium flex-1">{item.beneficio}</span>
-                      <div className="w-20 bg-secondary-100 rounded-full h-2">
-                        <div
-                          className="bg-gradient-to-r from-primary-500 to-primary-600 h-full rounded-full"
-                          style={{ width: `${item.valoracion}%` }}
-                        />
-                      </div>
-                      <span className="text-secondary-800 font-semibold text-sm w-8 text-right">
-                        {item.valoracion}%
-                      </span>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
@@ -891,11 +789,13 @@ export default function LandingPage() {
                 <a href="#" className="block text-secondary-300 hover:text-primary-300 transition-colors">
                   Metodología
                 </a>
-                <a href="#" className="block text-secondary-300 hover:text-primary-300 transition-colors">
-                  Datos Abiertos
-                </a>
-                <a href="#" className="block text-secondary-300 hover:text-primary-300 transition-colors">
-                  Próximos Relevamientos
+                <a
+                  href="https://public.tableau.com/app/profile/19deagosto.utn/vizzes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-secondary-300 hover:text-primary-300 transition-colors"
+                >
+                  Relevamientos anteriores
                 </a>
               </div>
             </div>
