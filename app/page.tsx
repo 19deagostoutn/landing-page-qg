@@ -786,7 +786,12 @@ export default function LandingPage() {
             <div>
               <h4 className="font-semibold mb-4 text-primary-300">Recursos</h4>
               <div className="space-y-2">
-                <a href="#" className="block text-secondary-300 hover:text-primary-300 transition-colors">
+                <a
+                  href="https://public.tableau.com/views/HablemosDePlata-RemuneracionesenIngenieraJUN25/Sobrelosdatos?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-secondary-300 hover:text-primary-300 transition-colors"
+                >
                   Metodología
                 </a>
                 <a
