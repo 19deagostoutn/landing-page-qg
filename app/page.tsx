@@ -548,12 +548,12 @@ export default function LandingPage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex justify-center">
-                    <div className="w-full max-w-3xl h-[600px] bg-secondary-50 rounded-lg shadow-lg border border-secondary-200 flex items-center justify-center">
+                    <div className="">
                       <iframe
                         src="/mapa_interactivo.html"
                         title="Mapa Interactivo de Argentina y Malvinas"
-                        className="w-full h-full rounded-lg border-0"
-                        style={{ background: 'transparent', minHeight: 500 }}
+                        className=""
+                        style={{ background: 'transparent', height: '600px', width: '100%' }}
                         allowFullScreen
                       />
                     </div>
@@ -577,14 +577,131 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="container mx-auto max-w-7xl mb-8">
+            <div className="container mx-auto max-w-7xl mb-8" style={{ padding: '0' }}>
               <Card className="lg:col-span-2 border-secondary-200">
                 <CardHeader>
                   <CardTitle className="text-secondary-800">Evolución Salarial por Seniority</CardTitle>
                   <CardDescription>Mediana de salarios según seniority</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="overflow-x-auto">
+                  {/* Texto para dispositivos móviles */}
+                  <div className="block md:hidden bg-gradient-to-r from-secondary-50 to-primary-50 rounded-xl p-8 shadow-md">
+                    <div style={{ width: '100%' }}>
+                      <div>
+                        <strong>Ambiental:</strong>
+                        <ul>
+                          <li>Junior: $700.000</li>
+                          <li>Semi-senior: $1.050.000</li>
+                          <li>Senior: $1.400.000</li>
+                          <li>Líder/Manager: –</li>
+                          <li>Gerencial: –</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <strong>Civil:</strong>
+                        <ul>
+                          <li>Junior: $1.084.200</li>
+                          <li>Semi-senior: $1.245.000</li>
+                          <li>Senior: $1.700.000</li>
+                          <li>Líder/Manager: $2.242.500</li>
+                          <li>Gerencial: $2.300.000</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <strong>Eléctrica:</strong>
+                        <ul>
+                          <li>Junior: $3.000.000</li>
+                          <li>Semi-senior: $2.300.000</li>
+                          <li>Senior: $2.800.000</li>
+                          <li>Líder/Manager: $2.000.000</li>
+                          <li>Gerencial: –</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <strong>Electromecánica:</strong>
+                        <ul>
+                          <li>Junior: $1.865.000</li>
+                          <li>Semi-senior: $1.700.000</li>
+                          <li>Senior: $2.000.000</li>
+                          <li>Líder/Manager: $2.100.000</li>
+                          <li>Gerencial: –</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <strong>Electrónica:</strong>
+                        <ul>
+                          <li>Junior: $830.000</li>
+                          <li>Semi-senior: $2.000.000</li>
+                          <li>Senior: $4.000.000</li>
+                          <li>Líder/Manager: $1.250.000</li>
+                          <li>Gerencial: –</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <strong>Industrial:</strong>
+                        <ul>
+                          <li>Junior: $681.000</li>
+                          <li>Semi-senior: $2.100.000</li>
+                          <li>Senior: $2.500.000</li>
+                          <li>Líder/Manager: $2.700.000</li>
+                          <li>Gerencial: $2.200.000</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <strong>Mecánica:</strong>
+                        <ul>
+                          <li>Junior: $1.000.000</li>
+                          <li>Semi-senior: $1.800.000</li>
+                          <li>Senior: $2.300.000</li>
+                          <li>Líder/Manager: $2.850.000</li>
+                          <li>Gerencial: $5.000.000</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <strong>Química:</strong>
+                        <ul>
+                          <li>Junior: $907.700</li>
+                          <li>Semi-senior: $1.900.000</li>
+                          <li>Senior: $2.900.000</li>
+                          <li>Líder/Manager: $2.100.000</li>
+                          <li>Gerencial: –</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <strong>Sistemas:</strong>
+                        <ul>
+                          <li>Junior: $1.100.000</li>
+                          <li>Semi-senior: $1.700.000</li>
+                          <li>Senior: $4.250.000</li>
+                          <li>Líder/Manager: $3.000.000</li>
+                          <li>Gerencial: –</li>
+                        </ul>
+                      </div>
+
+                      <div>
+                        <strong>Otras:</strong>
+                        <ul>
+                          <li>Junior: $1.300.000</li>
+                          <li>Semi-senior: $700.000</li>
+                          <li>Senior: $1.500.000</li>
+                          <li>Líder/Manager: –</li>
+                          <li>Gerencial: –</li>
+                        </ul>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  {/* Tabla para pantallas más grandes */}
+                  <div className="hidden md:block overflow-x-auto">
                     <table className="min-w-[700px] w-full border-collapse text-sm text-center font-sans bg-white rounded-lg shadow-md border border-secondary-200">
                       <thead className="bg-gradient-to-r from-primary-50 to-secondary-50">
                         <tr>
