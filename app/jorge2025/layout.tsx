@@ -9,8 +9,8 @@ export default function Jorge2025Layout({
   const navItems = [
     { label: "Inicio", sectionId: "inicio" },
     { label: "Candidato", sectionId: "candidato" },
-    { label: "Propuesta", sectionId: "propuesta" },
-    { label: "Votación", sectionId: "votacion" },
+    { label: "Plataforma", sectionId: "plataforma" },
+    { label: "Asamblea", sectionId: "asamblea" },
   ]
 
   const projects = [
