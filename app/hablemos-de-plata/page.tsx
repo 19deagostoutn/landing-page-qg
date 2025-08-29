@@ -49,8 +49,8 @@ function StarRating({ score, label }: { score: number; label: string }) {
   }
 
   return (
-    <div className="flex items-center justify-between w-full py-1">
-      <span className="text-secondary-600 text-sm font-medium flex-1">{label}</span>
+    <div className="flex items-center justify-between w-full py-1 mx-0">
+      <span className="text-secondary-600 text-sm font-medium flex-1 mx-5">{label}</span>
       <div className="flex gap-1 ml-4">{stars}</div>
       <span className="text-secondary-800 font-semibold ml-3 text-sm min-w-[2.5rem]">{score.toFixed(1)}</span>
     </div>
@@ -283,35 +283,35 @@ export default function LandingPage() {
                 <CardDescription className="text-secondary-100">Mediana de remuneración mensual</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4 pt-6">
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center gap-0 mx-5">
                   <span className="text-secondary-600">Ing. Civil</span>
                   <span className="font-semibold text-secondary-800">$1350K</span>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mx-5">
                   <span className="text-secondary-600">Ing. Sistemas</span>
                   <span className="font-semibold text-secondary-800">$1400K</span>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mx-5">
                   <span className="text-secondary-600">Ing. Química</span>
                   <span className="font-semibold text-secondary-800">$1500K</span>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mx-5">
                   <span className="text-secondary-600">Ing. Electrónica</span>
                   <span className="font-semibold text-secondary-800">$1600K</span>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center px-0 mx-5">
                   <span className="text-secondary-600">Ing. Industrial</span>
                   <span className="font-semibold text-secondary-800">$1700K</span>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mx-3 px-0 mx-5">
                   <span className="text-secondary-600">Ing. Mecánica</span>
                   <span className="font-semibold text-secondary-800">$1700K</span>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-secondary-600">Ing. Electromecánica</span>
+                <div className="flex justify-between items-center mx-5">
+                  <span className="flex justify-between items-center mx-0">Ing. Electromecánica</span>
                   <span className="font-semibold text-secondary-800">$1800K</span>
                 </div>
-                <div className="flex justify-between items-center">
+                <div className="flex justify-between items-center mx-5">
                   <span className="text-secondary-600">Ing. Eléctrica</span>
                   <span className="font-semibold text-secondary-800">$2300K</span>
                 </div>
