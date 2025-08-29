@@ -22,7 +22,7 @@ export function CandidateSection() {
                 </div>
           </div>
         </div>
-        <div className="bg-[#eaf2f8] rounded-xl p-8 max-w-3xl mx-auto mt-4">
+        <div className="bg-[#eaf2f8] rounded-xl p-8 max-w-3xl mx-auto mt-4 px-1.5">
           <h3 className="text-xl font-bold text-[#00508a] mb-2">Compromiso Histórico</h3>
           <p className="text-[#4b5e6b] text-base">
             Más de 15 años de trabajo sostenido en el departamento de Ingeniería Mecánica.<br />
@@ -40,7 +40,7 @@ export function CandidateSection() {
                 <div className="border-l-4 border-[#00508a] pl-4">
                   <div className="flex items-center gap-2 mb-2">
                     <Badge className="bg-[#ffb300] text-[#00508a] font-bold">2 años</Badge>
-                    <h4 className="font-semibold text-[#00508a] text-base">Especialista en Ensayos No Destructivos</h4>
+                    <h4 className="font-semibold text-[#00508a] text-base text-left">Especialista en Ensayos No Destructivos</h4>
                   </div>
                   <p className="text-[#4b5e6b] text-sm mb-1">Instituto Nacional de Tecnología Industrial</p>
                   <p className="text-xs text-[#4b5e6b]">2024 - actualidad</p>
@@ -56,7 +56,7 @@ export function CandidateSection() {
                 <div className="border-l-4 border-[#00508a] pl-4">
                   <div className="flex items-center gap-2 mb-2">
                     <Badge className="bg-[#ffb300] text-[#00508a] font-bold">4 años</Badge>
-                    <h4 className="font-semibold text-[#00508a] text-base">Responsable del Laboratorio de Métodos Volumétricos</h4>
+                    <h4 className="font-semibold text-[#00508a] text-base text-left">Responsable del Laboratorio de Métodos Volumétricos</h4>
                   </div>
                   <p className="text-[#4b5e6b] text-sm mb-1">Departamento de END, INTI</p>
                   <p className="text-xs text-[#4b5e6b]">2018 - 2022</p>
