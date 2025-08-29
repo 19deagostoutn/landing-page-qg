@@ -1,7 +1,6 @@
 "use client"
 
 import {
-  ArrowRight,
   BarChart3,
   Users,
   TrendingUp,
@@ -11,7 +10,6 @@ import {
   Calendar,
   Briefcase,
   DollarSign,
-  Award,
   Target,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -49,8 +47,8 @@ function StarRating({ score, label }: { score: number; label: string }) {
   }
 
   return (
-    <div className="flex items-center justify-between w-full py-1 mx-0">
-      <span className="text-secondary-600 text-sm font-medium flex-1 mx-5">{label}</span>
+    <div className="flex items-center justify-between w-full py-1 px-6">
+      <span className="text-secondary-600 text-sm font-medium flex-1">{label}</span>
       <div className="flex gap-1 ml-4">{stars}</div>
       <span className="text-secondary-800 font-semibold ml-3 text-sm min-w-[2.5rem]">{score.toFixed(1)}</span>
     </div>
@@ -174,7 +172,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-primary-50 via-primary-100 to-secondary-100">
       {/* Hero Section */}
-      <section className="py-16 px-4">
+      <section id="inicio" className="py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <Badge className="mb-4 bg-primary-500 text-secondary-800 hover:bg-primary-600 border-0">
             Hablemos De Plata 2025
@@ -230,39 +228,39 @@ export default function LandingPage() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <Card className="border-l-4 border-l-secondary-500 shadow-lg">
-              <CardHeader>
+              <CardHeader className="px-6 py-4">
                 <CardTitle className="flex items-center text-secondary-700">
                   <Users className="w-6 h-6 mr-2 text-secondary-600" />
                   Participantes
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="px-6 pb-6">
                 <div className="text-3xl font-bold text-secondary-800 mb-2">≈ 1000</div>
                 <p className="text-secondary-600">Trabajadores de ingeniería encuestadxs</p>
               </CardContent>
             </Card>
 
             <Card className="border-l-4 border-l-primary-500 shadow-lg">
-              <CardHeader>
+              <CardHeader className="px-6 py-4">
                 <CardTitle className="flex items-center text-secondary-700">
                   <TrendingUp className="w-6 h-6 mr-2 text-primary-600" />
                   Salario Promedio
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="px-6 pb-6">
                 <div className="text-3xl font-bold text-secondary-800 mb-2">$1,6M</div>
                 <p className="text-secondary-600">Remuneración mensual neta</p>
               </CardContent>
             </Card>
 
             <Card className="border-l-4 border-l-primary-600 shadow-lg">
-              <CardHeader>
+              <CardHeader className="px-6 py-4">
                 <CardTitle className="flex items-center text-secondary-700">
                   <BarChart3 className="w-6 h-6 mr-2 text-primary-600" />
                   Especialidades
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="px-6 pb-6">
                 <div className="text-3xl font-bold text-secondary-800 mb-2">9</div>
                 <p className="text-secondary-600">Ramas de ingeniería analizadas</p>
               </CardContent>
@@ -278,52 +276,51 @@ export default function LandingPage() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="hover:shadow-xl transition-shadow border-secondary-200">
-              <CardHeader className="bg-gradient-to-r from-secondary-500 to-secondary-600 text-white rounded-t-lg">
+              <CardHeader className="bg-gradient-to-r from-secondary-500 to-secondary-600 text-white rounded-t-lg px-6 py-4">
                 <CardTitle>Trabajo y Compensación</CardTitle>
                 <CardDescription className="text-secondary-100">Mediana de remuneración mensual</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4 pt-6">
-                <div className="flex justify-between items-center gap-0 mx-5">
+              <CardContent className="space-y-4 pt-6 px-6 pb-6">
+                <div className="flex justify-between items-center">
                   <span className="text-secondary-600">Ing. Civil</span>
                   <span className="font-semibold text-secondary-800">$1350K</span>
                 </div>
-                <div className="flex justify-between items-center mx-5">
+                <div className="flex justify-between items-center">
                   <span className="text-secondary-600">Ing. Sistemas</span>
                   <span className="font-semibold text-secondary-800">$1400K</span>
                 </div>
-                <div className="flex justify-between items-center mx-5">
+                <div className="flex justify-between items-center">
                   <span className="text-secondary-600">Ing. Química</span>
                   <span className="font-semibold text-secondary-800">$1500K</span>
                 </div>
-                <div className="flex justify-between items-center mx-5">
+                <div className="flex justify-between items-center">
                   <span className="text-secondary-600">Ing. Electrónica</span>
                   <span className="font-semibold text-secondary-800">$1600K</span>
                 </div>
-                <div className="flex justify-between items-center px-0 mx-5">
+                <div className="flex justify-between items-center">
                   <span className="text-secondary-600">Ing. Industrial</span>
                   <span className="font-semibold text-secondary-800">$1700K</span>
                 </div>
-                <div className="flex justify-between items-center mx-3 px-0 mx-5">
+                <div className="flex justify-between items-center">
                   <span className="text-secondary-600">Ing. Mecánica</span>
                   <span className="font-semibold text-secondary-800">$1700K</span>
                 </div>
-                <div className="flex justify-between items-center mx-5">
-                  <span className="flex justify-between items-center mx-0">Ing. Electromecánica</span>
+                <div className="flex justify-between items-center">
+                  <span className="text-secondary-600">Ing. Electromecánica</span>
                   <span className="font-semibold text-secondary-800">$1800K</span>
                 </div>
-                <div className="flex justify-between items-center mx-5">
+                <div className="flex justify-between items-center">
                   <span className="text-secondary-600">Ing. Eléctrica</span>
                   <span className="font-semibold text-secondary-800">$2300K</span>
                 </div>
               </CardContent>
-
             </Card>
             <Card className="hover:shadow-xl transition-shadow border-secondary-200">
-              <CardHeader className="bg-gradient-to-r from-secondary-600 to-secondary-700 text-white rounded-t-lg">
+              <CardHeader className="bg-gradient-to-r from-secondary-600 to-secondary-700 text-white rounded-t-lg px-6 py-4">
                 <CardTitle>Satisfacción con el lugar de Trabajo</CardTitle>
                 <CardDescription className="text-secondary-100">Puntaje de 5</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-3 pt-6">
+              <CardContent className="space-y-3 pt-6 pb-6">
                 <StarRating score={3.95} label="Asociación Civil" />
                 <StarRating score={4.9} label="Empresa Cooperativa" />
                 <StarRating score={4.32} label="Empresa Extranjera" />
@@ -335,11 +332,11 @@ export default function LandingPage() {
             </Card>
 
             <Card className="hover:shadow-xl transition-shadow border-secondary-200">
-              <CardHeader className="bg-gradient-to-r from-primary-500 to-primary-600 text-secondary-800 rounded-t-lg">
+              <CardHeader className="bg-gradient-to-r from-primary-500 to-primary-600 text-secondary-800 rounded-t-lg px-6 py-4">
                 <CardTitle>Modalidad de Trabajo</CardTitle>
                 <CardDescription className="text-secondary-700">Distribución del tipo de empleo</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4 pt-6">
+              <CardContent className="space-y-4 pt-6 px-6 pb-6">
                 <div className="flex justify-between items-center">
                   <span className="text-secondary-600">Presencial</span>
                   <span className="font-semibold text-secondary-800">49%</span>
@@ -360,11 +357,11 @@ export default function LandingPage() {
             </Card>
 
             <Card className="hover:shadow-xl transition-shadow border-secondary-200">
-              <CardHeader className="bg-gradient-to-r from-primary-600 to-primary-500 text-secondary-800 rounded-t-lg">
+              <CardHeader className="bg-gradient-to-r from-primary-600 to-primary-500 text-secondary-800 rounded-t-lg px-6 py-4">
                 <CardTitle>Género y jerarquía</CardTitle>
                 <CardDescription className="text-secondary-700">Porcentual de mujeres y disidencias</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4 pt-6">
+              <CardContent className="space-y-4 pt-6 px-6 pb-6">
                 {[
                   { level: "Junior", percentage: 37.7 },
                   { level: "Semi-Senior", percentage: 28.3 },
@@ -444,12 +441,10 @@ export default function LandingPage() {
 
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="border-secondary-200">
-                <CardHeader>
-                  <CardTitle className="text-secondary-800">
-                    Distribución por Especialidad
-                  </CardTitle>
+                <CardHeader className="px-6 py-4">
+                  <CardTitle className="text-secondary-800">Distribución por Especialidad</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-4 px-6 pb-6">
                   <div className="flex flex-wrap items-center gap-4 text-xs mb-4">
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-sm bg-secondary-100"></div>
@@ -513,17 +508,17 @@ export default function LandingPage() {
               </Card>
 
               <Card className="border-secondary-200">
-                <CardHeader>
+                <CardHeader className="px-6 py-4">
                   <CardTitle className="text-secondary-800">Distribución Geográfica</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-4 px-6 pb-6">
                   <div className="flex justify-center">
                     <div className="">
                       <iframe
                         src="/mapa_interactivo.html"
                         title="Mapa Interactivo de Argentina y Malvinas"
                         className=""
-                        style={{ background: 'transparent', height: '600px', width: '100%' }}
+                        style={{ background: "transparent", height: "600px", width: "100%" }}
                         allowFullScreen
                       />
                     </div>
@@ -547,7 +542,7 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="container mx-auto max-w-7xl mb-8" style={{ padding: '0' }}>
+            <div className="container mx-auto max-w-7xl mb-8" style={{ padding: "0" }}>
               <Card className="lg:col-span-2 border-secondary-200">
                 <CardHeader>
                   <CardTitle className="text-secondary-800">Evolución Salarial por Seniority</CardTitle>
@@ -556,7 +551,7 @@ export default function LandingPage() {
                 <CardContent>
                   {/* Texto para dispositivos móviles */}
                   <div className="block md:hidden bg-gradient-to-r from-secondary-50 to-primary-50 rounded-xl p-8 shadow-md">
-                    <div style={{ width: '100%' }}>
+                    <div style={{ width: "100%" }}>
                       <div>
                         <strong>Ambiental:</strong>
                         <ul>
@@ -666,7 +661,6 @@ export default function LandingPage() {
                           <li>Gerencial: –</li>
                         </ul>
                       </div>
-
                     </div>
                   </div>
 
@@ -675,16 +669,38 @@ export default function LandingPage() {
                     <table className="min-w-[700px] w-full border-collapse text-sm text-center font-sans bg-white rounded-lg shadow-md border border-secondary-200">
                       <thead className="bg-gradient-to-r from-primary-50 to-secondary-50">
                         <tr>
-                          <th rowSpan={2} className="border border-secondary-200 px-3 py-2 text-secondary-800 font-semibold bg-white">Seniority</th>
-                          <th colSpan={10} className="border border-secondary-200 px-3 py-2 text-secondary-800 font-semibold bg-white">Ingeniería estudiada</th>
+                          <th
+                            rowSpan={2}
+                            className="border border-secondary-200 px-3 py-2 text-secondary-800 font-semibold bg-white"
+                          >
+                            Seniority
+                          </th>
+                          <th
+                            colSpan={10}
+                            className="border border-secondary-200 px-3 py-2 text-secondary-800 font-semibold bg-white"
+                          >
+                            Ingeniería estudiada
+                          </th>
                         </tr>
                         <tr>
                           {[
-                            "Ambiental", "Civil", "Eléctrica", "Electromecánica",
-                            "Electrónica", "Industrial", "Mecánica",
-                            "Química", "Sistemas", "Otras"
+                            "Ambiental",
+                            "Civil",
+                            "Eléctrica",
+                            "Electromecánica",
+                            "Electrónica",
+                            "Industrial",
+                            "Mecánica",
+                            "Química",
+                            "Sistemas",
+                            "Otras",
                           ].map((nombre) => (
-                            <th key={nombre} className="border border-secondary-200 px-3 py-2 text-secondary-700 font-medium bg-white">{nombre}</th>
+                            <th
+                              key={nombre}
+                              className="border border-secondary-200 px-3 py-2 text-secondary-700 font-medium bg-white"
+                            >
+                              {nombre}
+                            </th>
                           ))}
                         </tr>
                       </thead>
@@ -692,29 +708,50 @@ export default function LandingPage() {
                         {[
                           {
                             nivel: "Junior",
-                            valores: [700000, 1084200, 3000000, 1865000, 830000, 681000, 1000000, 907700, 1100000, 1300000],
+                            valores: [
+                              700000, 1084200, 3000000, 1865000, 830000, 681000, 1000000, 907700, 1100000, 1300000,
+                            ],
                           },
                           {
                             nivel: "Semi-senior",
-                            valores: [1050000, 1245000, 2300000, 1700000, 2000000, 2100000, 1800000, 1900000, 1700000, 700000],
+                            valores: [
+                              1050000, 1245000, 2300000, 1700000, 2000000, 2100000, 1800000, 1900000, 1700000, 700000,
+                            ],
                           },
                           {
                             nivel: "Senior",
-                            valores: [1400000, 1700000, 2800000, 2000000, 4000000, 2500000, 2300000, 2900000, 4250000, 1500000],
+                            valores: [
+                              1400000, 1700000, 2800000, 2000000, 4000000, 2500000, 2300000, 2900000, 4250000, 1500000,
+                            ],
                           },
                           {
                             nivel: "Líder/Manager",
-                            valores: [null, 2242500, 2000000, 2100000, 1250000, 2700000, 2850000, 2100000, 3000000, null],
+                            valores: [
+                              null,
+                              2242500,
+                              2000000,
+                              2100000,
+                              1250000,
+                              2700000,
+                              2850000,
+                              2100000,
+                              3000000,
+                              null,
+                            ],
                           },
                           {
                             nivel: "Gerencial",
                             valores: [null, null, 2300000, null, null, 2200000, 5000000, null, null, null],
-                          }
+                          },
                         ].map(({ nivel, valores }, rowIdx) => (
                           <tr key={nivel} className={rowIdx % 2 === 0 ? "bg-secondary-50" : "bg-white"}>
-                            <td className="border border-secondary-200 px-3 py-1 font-medium text-secondary-800">{nivel}</td>
+                            <td className="border border-secondary-200 px-3 py-1 font-medium text-secondary-800">
+                              {nivel}
+                            </td>
                             {valores.map((v, idx) => (
-                              <td key={idx} className="border border-secondary-200 px-3 py-1 text-secondary-700">{v ? v.toLocaleString("es-AR") : "-"}</td>
+                              <td key={idx} className="border border-secondary-200 px-3 py-1 text-secondary-700">
+                                {v ? v.toLocaleString("es-AR") : "-"}
+                              </td>
                             ))}
                           </tr>
                         ))}
@@ -731,8 +768,9 @@ export default function LandingPage() {
                 <div>
                   <h5 className="font-semibold text-secondary-700 mb-2">Brecha Salarial por Género</h5>
                   <p className="text-secondary-600 text-sm mb-4">
-                    En casi el 100% de los casos encuestados, las mujeres ganan menos que los hombres en posiciones equivalentes. 
-                  </p>                 
+                    En casi el 100% de los casos encuestados, las mujeres ganan menos que los hombres en posiciones
+                    equivalentes.
+                  </p>
                 </div>
                 <Button
                   size="lg"
@@ -746,7 +784,7 @@ export default function LandingPage() {
                 >
                   <ExternalLink className="w-5 h-5 mr-2" />
                   Ver Análisis Dinámico
-                </Button>                 
+                </Button>
               </div>
             </div>
           </div>

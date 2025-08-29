@@ -62,7 +62,7 @@ export function Header({ navItems, projects }: HeaderProps) {
 
   // Navegación interna o entre páginas
   const handleNav = (item: NavItem) => {
-    if (item.sectionId && window.location.pathname === "/jorge2025") {
+    if (item.sectionId) {
       const element = document.getElementById(item.sectionId)
       if (element) {
         element.scrollIntoView({ behavior: "smooth" })
@@ -80,7 +80,7 @@ export function Header({ navItems, projects }: HeaderProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
-      } mb-4`}
+      }`}
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
@@ -104,9 +104,14 @@ export function Header({ navItems, projects }: HeaderProps) {
             ))}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="text-foreground border-secondary-400 hover:bg-secondary-50 bg-white/80">Proyectos</Button>
+                <Button
+                  variant="outline"
+                  className="text-foreground border-secondary-400 hover:bg-secondary-50 bg-white/80"
+                >
+                  Proyectos
+                </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
+              <DropdownMenuContent align="end" className="bg-white border border-border shadow-lg">
                 {projects.map((project) => (
                   <DropdownMenuItem key={project.label} asChild>
                     <Link href={project.href}>{project.label}</Link>
@@ -142,9 +147,14 @@ export function Header({ navItems, projects }: HeaderProps) {
               ))}
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button variant="outline" className="text-foreground border-secondary-400 hover:bg-secondary-50 bg-white/80 w-full text-left">Proyectos</Button>
+                  <Button
+                    variant="outline"
+                    className="text-foreground border-secondary-400 hover:bg-secondary-50 bg-white/80 w-full text-left"
+                  >
+                    Proyectos
+                  </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="start">
+                <DropdownMenuContent align="start" className="bg-white border border-border shadow-lg">
                   {projects.map((project) => (
                     <DropdownMenuItem key={project.label} asChild>
                       <Link href={project.href}>{project.label}</Link>

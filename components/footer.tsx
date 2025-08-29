@@ -1,42 +1,79 @@
+import Image from "next/image"
+
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground py-12">
-      <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div>
-              <div className="flex items-center space-x-3 mb-4">
-                <img src="/logo-19-agosto.png" alt="19 de Agosto" className="h-10 w-auto" />
+    <footer className="bg-secondary-800 text-white py-12 px-4">
+      <div className="container mx-auto max-w-6xl">
+        <div className="grid md:grid-cols-3 gap-8">
+          <div>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-10 h-10 relative">
+                <Image src="/logo-19-agosto.png" alt="Logo 19 de Agosto" fill className="object-contain" />
               </div>
-              <p className="text-primary-foreground/80 leading-relaxed">
-                La primera candidatura de oposición en 20 años. Prepararnos para el futuro de la UTN FRBA.
-              </p>
+              <div>
+                <h3 className="font-bold text-primary-300">19 de Agosto</h3>
+                <p className="text-sm text-secondary-300">UTN FRBA</p>
+              </div>
             </div>
+            <p className="text-secondary-300">
+              Agrupación política interclaustro comprometida con el desarrollo profesional de lxs ingenierxs para el
+              desarrollo nacional.
+            </p>
+          </div>
 
-            <div>
-              <h4 className="font-bold text-lg mb-4">Jorge Schneebeli</h4>
-              <p className="text-primary-foreground/80 leading-relaxed">
-                Candidato a Decano UTN FRBA 2025. Más de 35 años de experiencia en el INTI y más de 20 años de compromiso en la UTN FRBA.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-lg mb-4">Nuestra Propuesta</h4>
-              <p className="text-primary-foreground/80 leading-relaxed">
-                Una Facultad moderna, comprometida con la excelencia académica, la innovación y el bienestar de toda la
-                comunidad.
-              </p>
+          <div>
+            <h4 className="font-semibold mb-4 text-primary-300">Contacto</h4>
+            <div className="space-y-2 text-secondary-300">
+              <a
+                href="mailto:19deagosto.utn@gmail.com"
+                className="flex items-center hover:text-primary-300 transition-colors cursor-pointer"
+              >
+                📧 19deagosto.utn@gmail.com
+              </a>
+              <a
+                href="https://www.instagram.com/19deagosto.utn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center hover:text-primary-300 transition-colors cursor-pointer"
+              >
+                📱 @19deagosto.utn
+              </a>
+              <a
+                href="https://maps.app.goo.gl/qybbmBu2V4fYtGSHA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center hover:text-primary-300 transition-colors cursor-pointer"
+              >
+                🏢 UTN FRBA - Medrano 951
+              </a>
             </div>
           </div>
 
-          <div className="border-t border-primary-foreground/20 pt-8 text-center">
-            <p className="text-primary-foreground/60">
-              © 2025 19 de Agosto. Todos los derechos reservados.
-            </p>
-            <p className="text-primary-foreground/60 mt-2">
-              UTN FRBA - Universidad Tecnológica Nacional - Facultad Regional Buenos Aires
-            </p>
+          <div>
+            <h4 className="font-semibold mb-4 text-primary-300">Recursos</h4>
+            <div className="space-y-2">
+              <a
+                href="https://public.tableau.com/views/HablemosDePlata-RemuneracionesenIngenieraJUN25/Sobrelosdatos?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-secondary-300 hover:text-primary-300 transition-colors"
+              >
+                Metodología
+              </a>
+              <a
+                href="https://public.tableau.com/app/profile/19deagosto.utn/vizzes"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-secondary-300 hover:text-primary-300 transition-colors"
+              >
+                Relevamientos anteriores
+              </a>
+            </div>
           </div>
+        </div>
+
+        <div className="border-t border-secondary-700 mt-8 pt-8 text-center text-secondary-400">
+          <p>&copy; 2025 Agrupación 19 de Agosto - UTN FRBA. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

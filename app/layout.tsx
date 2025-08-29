@@ -1,38 +1,25 @@
+import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import "@/app/globals.css"
-// import { ThemeProvider } from "@/components/theme-provider" // Descomenta si quieres soporte de tema
+import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-	title: "19 de Agosto",
-	description: "Agrupación interclaustro de la UTN FRBA desde el 2009",
-	icons: {
-		icon: "/logo-19-agosto.png",
-		shortcut: "/logo-19-agosto.png",
-		apple: "/logo-19-agosto.png",
-	},
-	generator: "v0.dev",
+  title: "19 de Agosto - UTN FRBA",
+  description:
+    "Agrupación política interclaustro comprometida con el desarrollo profesional de lxs ingenierxs para el desarrollo nacional.",
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
-	children,
+  children,
 }: {
-	children: React.ReactNode
+  children: React.ReactNode
 }) {
-	return (
-		<html lang="es">
-			<head>
-				<link rel="icon" href="/logo-19-agosto.png" type="image/png" />
-				<link rel="shortcut icon" href="/logo-19-agosto.png" type="image/png" />
-				<link rel="apple-touch-icon" href="/logo-19-agosto.png" />
-			</head>
-			<body className={inter.className}>
-				{/* <ThemeProvider attribute="class" defaultTheme="light" enableSystem> */}
-				{children}
-				{/* </ThemeProvider> */}
-			</body>
-		</html>
-	)
+  return (
+    <html lang="es">
+      <body className={inter.className}>{children}</body>
+    </html>
+  )
 }
