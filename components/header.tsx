@@ -111,7 +111,7 @@ export function Header({ navItems, projects }: HeaderProps) {
                   Proyectos
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="bg-white border border-border shadow-lg">
+              <DropdownMenuContent align="end" className="bg-[#fff] border border-border shadow-lg">
                 {projects.map((project) => (
                   <DropdownMenuItem key={project.label} asChild>
                     <Link href={project.href}>{project.label}</Link>
