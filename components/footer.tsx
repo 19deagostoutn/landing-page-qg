@@ -16,8 +16,7 @@ export function Footer() {
             <div>
               <h4 className="font-bold text-lg mb-4">Jorge Schneebeli</h4>
               <p className="text-primary-foreground/80 leading-relaxed">
-                Candidato a Decano UTN FRBA 2025. Más de 35 años de experiencia en el INTI y 15 años de compromiso en el
-                Consejo Directivo.
+                Candidato a Decano UTN FRBA 2025. Más de 35 años de experiencia en el INTI y más de 20 años de compromiso en la UTN FRBA.
               </p>
             </div>
 
