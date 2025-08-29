@@ -26,6 +26,67 @@ export function PlatformSection() {
           <Card className="bg-[#f4f8fb] border border-[#dbeafe] rounded-xl shadow-sm">
             <CardHeader className="flex flex-row items-center gap-3 bg-transparent p-6 pb-2">
               <Users className="h-7 w-7 text-[#00508a] bg-[#eaf2f8] rounded-md p-1" />
+              <CardTitle className="text-lg font-bold text-[#00508a]">Docencia: Evolucionar sin perder lo valioso</CardTitle>
+            </CardHeader>
+            <CardContent className="pt-0 pb-4 px-6">
+              <p className="text-[#4b5e6b] mb-3">Transformación pedagógica que respete nuestra historia y potencie el futuro</p>
+              <ul className="space-y-1">
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Formación pedagógica continua para docentes</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Incorporación progresiva de métodos activos</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Uso criterioso de nuevas tecnologías e IA</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Flexibilidad académica sin sacrificar calidad</span></li>
+              </ul>
+            </CardContent>
+          </Card>
+          <Card className="bg-[#f4f8fb] border border-[#dbeafe] rounded-xl shadow-sm">
+            <CardHeader className="flex flex-row items-center gap-3 bg-transparent p-6 pb-2">
+              <Trophy className="h-7 w-7 text-[#00508a] bg-[#eaf2f8] rounded-md p-1" />
+              <CardTitle className="text-lg font-bold text-[#00508a]">Bienestar Estudiantil Integral</CardTitle>
+            </CardHeader>
+            <CardContent className="pt-0 pb-4 px-6">
+              <p className="text-[#4b5e6b] mb-3">Red modelo de atención integral para toda la comunidad estudiantil</p>
+              <ul className="space-y-1">
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Apoyo psicológico y orientación vocacional</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Puntos de Encuentro Estudiantil en toda la FRBA</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Ayuda económica de emergencia</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Actividades culturales y recreativas</span></li>
+              </ul>
+            </CardContent>
+          </Card>
+          <Card className="bg-[#f4f8fb] border border-[#dbeafe] rounded-xl shadow-sm">
+            <CardHeader className="flex flex-row items-center gap-3 bg-transparent p-6 pb-2">
+              <Users className="h-7 w-7 text-[#00508a] bg-[#eaf2f8] rounded-md p-1" />
+              <CardTitle className="text-lg font-bold text-[#00508a]">Investigación y Desarrollo con Impacto</CardTitle>
+            </CardHeader>
+            <CardContent className="pt-0 pb-4 px-6">
+              <p className="text-[#4b5e6b] mb-3">Laboratorios colaborativos e incubadoras para prototipos tecnológicos</p>
+              <ul className="space-y-1">
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Laboratorios interdisciplinarios abiertos</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Fondo de estímulo a proyectos I+D+i</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Inclusión temprana de estudiantes en investigación</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Redes con CONICET, INTI y organismos similares</span></li>
+              </ul>
+            </CardContent>
+          </Card>
+          <Card className="bg-[#f4f8fb] border border-[#dbeafe] rounded-xl shadow-sm">
+            <CardHeader className="flex flex-row items-center gap-3 bg-transparent p-6 pb-2">
+              <Trophy className="h-7 w-7 text-[#00508a] bg-[#eaf2f8] rounded-md p-1" />
+              <CardTitle className="text-lg font-bold text-[#00508a]">Vinculación con la Industria y el Territorio</CardTitle>
+            </CardHeader>
+            <CardContent className="pt-0 pb-4 px-6">
+              <p className="text-[#4b5e6b] mb-3">Campus Abierto para colaboración con startups, PYMEs y cámaras sectoriales</p>
+              <ul className="space-y-1">
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Espacios compartidos de trabajo y mentoría</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Convenios dinámicos con empresas</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Redes territoriales: 'FRBA en la ciudad'</span></li>
+                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Transferencia tecnológica e innovación aplicada</span></li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-[#f4f8fb] border border-[#dbeafe] rounded-xl shadow-sm">
+            <CardHeader className="flex flex-row items-center gap-3 bg-transparent p-6 pb-2">
+              <Users className="h-7 w-7 text-[#00508a] bg-[#eaf2f8] rounded-md p-1" />
               <CardTitle className="text-lg font-bold text-[#00508a]">Igualdad de Género e Inclusión Universitaria</CardTitle>
             </CardHeader>
             <CardContent className="pt-0 pb-4 px-6">
@@ -71,7 +132,7 @@ export function PlatformSection() {
           <Card className="bg-[#f4f8fb] border border-[#dbeafe] rounded-xl shadow-sm">
             <CardHeader className="flex flex-row items-center gap-3 bg-transparent p-6 pb-2">
               <BookOpen className="h-7 w-7 text-[#00508a] bg-[#eaf2f8] rounded-md p-1" />
-              <CardTitle className="text-lg font-bold text-[#00508a]">Políticas en Extensión Universitaria, Académica y en Investigación</CardTitle>
+              <CardTitle className="text-lg font-bold text-[#00508a]">Políticas en Extensión Universitaria</CardTitle>
             </CardHeader>
             <CardContent className="pt-0 pb-4 px-6">
               <p className="text-[#4b5e6b] mb-3">Integración de la universidad con la sociedad y el desarrollo territorial</p>
