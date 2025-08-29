@@ -4,8 +4,12 @@ import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
   return (
-    <section id="inicio" className="py-20 bg-gradient-to-br from-primary-50 via-primary-100 to-secondary-100">
-      <div className="container mx-auto px-4 flex flex-col items-center text-center">
+    <section
+      id="inicio"
+      className="flex-1 flex items-center justify-center min-h-0 bg-gradient-to-br from-primary-50 via-primary-100 to-secondary-100 w-full"
+      style={{ minHeight: 0 }}
+    >
+      <div className="mx-auto px-4 flex flex-col items-center text-center">
         <img src="/logo-19-agosto.png" alt="19 de Agosto" className="h-24 w-auto mb-6 mx-auto" />
         <h1 className="text-5xl md:text-6xl font-bold text-secondary-800 mb-4">19 de Agosto</h1>
         <h2 className="text-xl md:text-2xl text-secondary-600 mb-8 font-medium">
