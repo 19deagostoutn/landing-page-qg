@@ -16,8 +16,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-secondary-300">
-              Agrupación política interclaustro comprometida con el desarrollo profesional de lxs ingenierxs para el
-              desarrollo nacional.
+              Agrupación política interclaustro de la UTN FRBA. Más de 15 años impulsando una gran UTN para la grandeza nacional.
             </p>
           </div>
 
