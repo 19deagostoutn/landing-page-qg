@@ -31,10 +31,10 @@ export function PlatformSection() {
             <CardContent className="pt-0 pb-4 px-6">
               <p className="text-[#4b5e6b] mb-3">Transformación pedagógica que respete nuestra historia y potencie el futuro</p>
               <ul className="space-y-1">
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Formación pedagógica continua para docentes</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Incorporación progresiva de métodos activos</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Uso criterioso de nuevas tecnologías e IA</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Flexibilidad académica sin sacrificar calidad</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Formación pedagógica continua para docentes</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Incorporación progresiva de métodos activos</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Uso criterioso de nuevas tecnologías e IA</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Flexibilidad académica sin sacrificar calidad</span></li>
               </ul>
             </CardContent>
           </Card>
@@ -46,10 +46,10 @@ export function PlatformSection() {
             <CardContent className="pt-0 pb-4 px-6">
               <p className="text-[#4b5e6b] mb-3">Red modelo de atención integral para toda la comunidad estudiantil</p>
               <ul className="space-y-1">
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Apoyo psicológico y orientación vocacional</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Puntos de Encuentro Estudiantil en toda la FRBA</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Ayuda económica de emergencia</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Actividades culturales y recreativas</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Apoyo psicológico y orientación vocacional</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Puntos de Encuentro Estudiantil en toda la FRBA</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Ayuda económica de emergencia</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Actividades culturales y recreativas</span></li>
               </ul>
             </CardContent>
           </Card>
@@ -61,10 +61,10 @@ export function PlatformSection() {
             <CardContent className="pt-0 pb-4 px-6">
               <p className="text-[#4b5e6b] mb-3">Laboratorios colaborativos e incubadoras para prototipos tecnológicos</p>
               <ul className="space-y-1">
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Laboratorios interdisciplinarios abiertos</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Fondo de estímulo a proyectos I+D+i</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Inclusión temprana de estudiantes en investigación</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Redes con CONICET, INTI y organismos similares</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Laboratorios interdisciplinarios abiertos</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Fondo de estímulo a proyectos I+D+i</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Inclusión temprana de estudiantes en investigación</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Redes con CONICET, INTI y organismos similares</span></li>
               </ul>
             </CardContent>
           </Card>
@@ -76,10 +76,10 @@ export function PlatformSection() {
             <CardContent className="pt-0 pb-4 px-6">
               <p className="text-[#4b5e6b] mb-3">Campus Abierto para colaboración con startups, PYMEs y cámaras sectoriales</p>
               <ul className="space-y-1">
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Espacios compartidos de trabajo y mentoría</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Convenios dinámicos con empresas</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Redes territoriales: 'FRBA en la ciudad'</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Transferencia tecnológica e innovación aplicada</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Espacios compartidos de trabajo y mentoría</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Convenios dinámicos con empresas</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Redes territoriales: 'FRBA en la ciudad'</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Transferencia tecnológica e innovación aplicada</span></li>
               </ul>
             </CardContent>
           </Card>
@@ -92,10 +92,10 @@ export function PlatformSection() {
             <CardContent className="pt-0 pb-4 px-6">
               <p className="text-[#4b5e6b] mb-3">Fortalecimiento de políticas de género y diversidad en ingeniería</p>
               <ul className="space-y-1">
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Diagnóstico institucional y seguimiento</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Becas y tutorías para mujeres y diversidades</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Protocolos y espacios seguros</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Campañas de visibilización y prevención</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Diagnóstico institucional y seguimiento</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Becas y tutorías para mujeres y diversidades</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Protocolos y espacios seguros</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Campañas de visibilización y prevención</span></li>
               </ul>
             </CardContent>
           </Card>
@@ -107,10 +107,10 @@ export function PlatformSection() {
             <CardContent className="pt-0 pb-4 px-6">
               <p className="text-[#4b5e6b] mb-3">Formación integral que potencie cuerpo, mente y comunidad</p>
               <ul className="space-y-1">
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Infraestructura deportiva y ligas interclaustro</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Programa de Cultura FRBA con talleres abiertos</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Espacios de exposición y expresión cultural</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Jornadas de Identidad Tecnológica FRBA</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Infraestructura deportiva y ligas interclaustro</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Programa de Cultura FRBA con talleres abiertos</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Espacios de exposición y expresión cultural</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Jornadas de Identidad Tecnológica FRBA</span></li>
               </ul>
             </CardContent>
           </Card>
@@ -122,10 +122,10 @@ export function PlatformSection() {
             <CardContent className="pt-0 pb-4 px-6">
               <p className="text-[#4b5e6b] mb-3">Fortalecimiento de lazos entre regionales y universidades nacionales</p>
               <ul className="space-y-1">
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Redes activas con otras regionales UTN</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Intercambios académicos entre sedes</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Alianzas con universidades públicas del país</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Participación en CONFEDI y redes globales</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Redes activas con otras regionales UTN</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Intercambios académicos entre sedes</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Alianzas con universidades públicas del país</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Participación en CONFEDI y redes globales</span></li>
               </ul>
             </CardContent>
           </Card>
@@ -137,10 +137,10 @@ export function PlatformSection() {
             <CardContent className="pt-0 pb-4 px-6">
               <p className="text-[#4b5e6b] mb-3">Integración de la universidad con la sociedad y el desarrollo territorial</p>
               <ul className="space-y-1">
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Programas de extensión con impacto social</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Articulación académica con sectores productivos</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Investigación aplicada a problemáticas locales</span></li>
-                <li className="flex items-start gap-2"><span className="mt-1 w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Transferencia de conocimiento a la comunidad</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Programas de extensión con impacto social</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Articulación académica con sectores productivos</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Investigación aplicada a problemáticas locales</span></li>
+                <li className="flex items-start gap-2"><span className="mt-[0.5em] w-2 h-2 rounded-full bg-[#ffb300] inline-block"></span><span>Transferencia de conocimiento a la comunidad</span></li>
               </ul>
             </CardContent>
           </Card>

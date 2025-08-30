@@ -43,7 +43,7 @@ export function CandidateSection() {
               <div className="space-y-6">
                 {/* Cada experiencia */}
                 <div className="border-l-4 border-[#00508a] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-start gap-2 mb-2">
                     <Badge className="bg-[#ffb300] text-[#00508a] font-bold whitespace-nowrap px-3 py-1">2 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base text-left">
                       Especialista en Ensayos No Destructivos
@@ -53,7 +53,7 @@ export function CandidateSection() {
                   <p className="text-xs text-[#4b5e6b]">2024 - actualidad</p>
                 </div>
                 <div className="border-l-4 border-[#ffb300] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-start gap-2 mb-2">
                     <Badge className="bg-[#00508a] text-[#ffb300] font-bold whitespace-nowrap px-3 py-1">2 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base">Vicepresidente INTI</h4>
                   </div>
@@ -61,7 +61,7 @@ export function CandidateSection() {
                   <p className="text-xs text-[#4b5e6b]">2022 - 2024</p>
                 </div>
                 <div className="border-l-4 border-[#00508a] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-start gap-2 mb-2">
                     <Badge className="bg-[#ffb300] text-[#00508a] font-bold whitespace-nowrap px-3 py-1">4 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base text-left">
                       Responsable del Laboratorio de Métodos Volumétricos
@@ -71,7 +71,7 @@ export function CandidateSection() {
                   <p className="text-xs text-[#4b5e6b]">2018 - 2022</p>
                 </div>
                 <div className="border-l-4 border-[#ffb300] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-start gap-2 mb-2">
                     <Badge className="bg-[#00508a] text-[#ffb300] font-bold whitespace-nowrap px-3 py-1">6 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base">Gerencia de Proyectos Especiales</h4>
                   </div>
@@ -79,7 +79,7 @@ export function CandidateSection() {
                   <p className="text-xs text-[#4b5e6b]">2012 - 2018</p>
                 </div>
                 <div className="border-l-4 border-[#00508a] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-start gap-2 mb-2">
                     <Badge className="bg-[#ffb300] text-[#00508a] font-bold whitespace-nowrap px-3 py-1">13 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base">Director Centro I+D</h4>
                   </div>
@@ -87,7 +87,7 @@ export function CandidateSection() {
                   <p className="text-xs text-[#4b5e6b]">2005 - 2018</p>
                 </div>
                 <div className="border-l-4 border-[#ffb300] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-start gap-2 mb-2">
                     <Badge className="bg-[#00508a] text-[#ffb300] font-bold whitespace-nowrap px-3 py-1">15 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base">
                       Unidad Técnica de Ensayos No Destructivos
@@ -97,7 +97,7 @@ export function CandidateSection() {
                   <p className="text-xs text-[#4b5e6b]">1990 - 2005</p>
                 </div>
                 <div className="border-l-4 border-[#00508a] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-start gap-2 mb-2">
                     <Badge className="bg-[#ffb300] text-[#00508a] font-bold whitespace-nowrap px-3 py-1">2 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base">Becario en el Departamento de Mecánica</h4>
                   </div>
@@ -113,7 +113,7 @@ export function CandidateSection() {
               <h3 className="text-2xl font-bold text-[#00508a] mb-6">Actividad Docente</h3>
               <div className="space-y-6">
                 <div className="border-l-4 border-[#ffb300] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-start gap-2 mb-2">
                     <Badge className="bg-[#00508a] text-[#ffb300] font-bold whitespace-nowrap px-3 py-1">4 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base">
                       Codirector de Carrera Ingeniería Industrial - UNSAM
@@ -122,7 +122,7 @@ export function CandidateSection() {
                   <p className="text-[#4b5e6b] text-xs mb-1">2021 - actualidad</p>
                 </div>
                 <div className="border-l-4 border-[#00508a] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-start gap-2 mb-2">
                     <Badge className="bg-[#ffb300] text-[#00508a] font-bold whitespace-nowrap px-3 py-1">11 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base">
                       Consejero docente del Consejo Departamental de Mecánica, UTN FRBA
@@ -131,16 +131,16 @@ export function CandidateSection() {
                   <p className="text-[#4b5e6b] text-xs mb-1">2014 - actualidad</p>
                 </div>
                 <div className="border-l-4 border-[#ffb300] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Badge className="bg-[#00508a] text-[#ffb300] font-bold whitespace-nowrap px-3 py-1">14 años</Badge>
+                  <div className="flex items-start gap-2 mb-2">
+                    <Badge className="bg-[#00508a] text-[#ffb300] font-bold whitespace-nowrap px-3 py-1">23 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base">
                       Docente de Mediciones y Ensayos, Ingeniería Mecánica, UTN FRBA
                     </h4>
                   </div>
-                  <p className="text-[#4b5e6b] text-xs mb-1">2011 - actualidad</p>
+                  <p className="text-[#4b5e6b] text-xs mb-1">2003 - actualidad</p>
                 </div>
                 <div className="border-l-4 border-[#00508a] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-start gap-2 mb-2">
                     <Badge className="bg-[#ffb300] text-[#00508a] font-bold whitespace-nowrap px-3 py-1">11 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base">
                       Docente de Calidad en la Industria Metalmecánica, Ingeniería Industrial, UNSAM
@@ -149,7 +149,7 @@ export function CandidateSection() {
                   <p className="text-[#4b5e6b] text-xs mb-1">2014 - actualidad</p>
                 </div>
                 <div className="border-l-4 border-[#ffb300] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-start gap-2 mb-2">
                     <Badge className="bg-[#00508a] text-[#ffb300] font-bold whitespace-nowrap px-3 py-1">6 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base">
                       Docente de Procesos Industriales, Ingeniería Industrial, UNSAM
@@ -158,7 +158,7 @@ export function CandidateSection() {
                   <p className="text-[#4b5e6b] text-xs mb-1">2013 - 2018</p>
                 </div>
                 <div className="border-l-4 border-[#00508a] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-start gap-2 mb-2">
                     <Badge className="bg-[#ffb300] text-[#00508a] font-bold whitespace-nowrap px-3 py-1">26 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base">
                       Docente en la carrera de Especialización en Calidad Industrial, INCALIN, UNSAM
@@ -167,7 +167,7 @@ export function CandidateSection() {
                   <p className="text-[#4b5e6b] text-xs mb-1">1999 - actualidad</p>
                 </div>
                 <div className="border-l-4 border-[#ffb300] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-start gap-2 mb-2">
                     <Badge className="bg-[#00508a] text-[#ffb300] font-bold whitespace-nowrap px-3 py-1">25 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base">
                       Tutor a cargo de becarios y prácticas profesionales supervisadas en el INTI
@@ -176,22 +176,13 @@ export function CandidateSection() {
                   <p className="text-[#4b5e6b] text-xs mb-1">2000 - actualidad</p>
                 </div>
                 <div className="border-l-4 border-[#00508a] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-start gap-2 mb-2">
                     <Badge className="bg-[#ffb300] text-[#00508a] font-bold whitespace-nowrap px-3 py-1">34 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base">
                       Capacitador según norma IRAM NM ISO 9712 en Métodos No Destructivos
                     </h4>
                   </div>
                   <p className="text-[#4b5e6b] text-xs mb-1">1991 - actualidad</p>
-                </div>
-                <div className="border-l-4 border-[#ffb300] pl-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Badge className="bg-[#00508a] text-[#ffb300] font-bold whitespace-nowrap px-3 py-1">8 años</Badge>
-                    <h4 className="font-semibold text-[#00508a] text-base">
-                      Ayudante de laboratorio de Mediciones y Ensayos, Ingeniería Mecánica, UTN FRBA
-                    </h4>
-                  </div>
-                  <p className="text-[#4b5e6b] text-xs mb-1">2003 - 2010</p>
                 </div>
               </div>
             </CardContent>
@@ -211,8 +202,8 @@ export function CandidateSection() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#fff8e1] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <GraduationCap className="h-6 w-6 text-[#ffb300]" />
+                  <div className="w-12 h-12 bg-[#eaf2f8] rounded-lg flex items-center justify-center flex-shrink-0">
+                    <GraduationCap className="h-6 w-6 text-[#00508a]" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#00508a] text-base">Especialista en Calidad Industrial</h4>
