@@ -44,13 +44,13 @@ export function CandidateSection() {
                 {/* Cada experiencia */}
                 <div className="border-l-4 border-[#00508a] pl-4">
                   <div className="flex items-start gap-2 mb-2">
-                    <Badge className="bg-[#ffb300] text-[#00508a] font-bold whitespace-nowrap px-3 py-1">2 años</Badge>
+                    <Badge className="bg-[#ffb300] text-[#00508a] font-bold whitespace-nowrap px-3 py-1">35 años</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base text-left">
                       Especialista en Ensayos No Destructivos
                     </h4>
                   </div>
                   <p className="text-[#4b5e6b] text-sm mb-1">Instituto Nacional de Tecnología Industrial</p>
-                  <p className="text-xs text-[#4b5e6b]">2024 - actualidad</p>
+                  <p className="text-xs text-[#4b5e6b]">1990 - actualidad</p>
                 </div>
                 <div className="border-l-4 border-[#ffb300] pl-4">
                   <div className="flex items-start gap-2 mb-2">
@@ -98,7 +98,7 @@ export function CandidateSection() {
                 </div>
                 <div className="border-l-4 border-[#00508a] pl-4">
                   <div className="flex items-start gap-2 mb-2">
-                    <Badge className="bg-[#ffb300] text-[#00508a] font-bold whitespace-nowrap px-3 py-1">2 años</Badge>
+                    <Badge className="bg-[#ffb300] text-[#00508a] font-bold whitespace-nowrap px-3 py-1">1 año</Badge>
                     <h4 className="font-semibold text-[#00508a] text-base">Becario en el Departamento de Mecánica</h4>
                   </div>
                   <p className="text-[#4b5e6b] text-sm mb-1">Instituto Nacional de Tecnología Industrial</p>
