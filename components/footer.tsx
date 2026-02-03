@@ -50,7 +50,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-secondary-700 mt-8 pt-8 text-center text-secondary-400">
-          <p>&copy; 2025 Agrupación 19 de Agosto - UTN FRBA. Todos los derechos reservados.</p>
+          <p>&copy; 2026 Agrupación 19 de Agosto - UTN FRBA. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
