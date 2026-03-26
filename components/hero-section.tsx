@@ -34,6 +34,13 @@ export function HeroSection() {
           >
             <a href="/hablemos-de-plata">Hablemos de plata</a>
           </Button>
+          <Button
+             asChild
+             size="lg"
+             className="bg-secondary-800 text-primary-50 hover:bg-secondary-700 font-semibold w-full sm:w-auto"
+          >
+             <a href="/Ayuda19">AYUDA19</a>
+          </Button>
         </div>
       </div>
     </section>
