@@ -3,10 +3,11 @@
 import { useState } from 'react'
 import { ProfileForm } from '@/components/ayuda19/profile-form'
 import { RoadmapCivil } from '@/components/ayuda19/roadmap-civil'
-import { GraduationCap, UserCircle } from 'lucide-react'
+import { SiuGuaraniTab } from '@/components/ayuda19/siu-guarani-tab'
+import { GraduationCap, School, UserCircle } from 'lucide-react'
 
 export default function Ayuda19DashboardPage() {
-  const [activeTab, setActiveTab] = useState<'profile' | 'plan'>('profile')
+  const [activeTab, setActiveTab] = useState<'profile' | 'plan' | 'siu'>('profile')
 
   return (
     <div className="max-w-6xl mx-auto space-y-8">
@@ -41,11 +42,23 @@ export default function Ayuda19DashboardPage() {
             <GraduationCap size={18} />
             Seguimiento de Plan
           </button>
+          <button
+            onClick={() => setActiveTab('siu')}
+            className={`flex-1 flex items-center justify-center gap-2 py-4 px-6 text-sm font-medium transition-colors ${
+              activeTab === 'siu'
+                ? 'bg-white text-primary-600 border-b-2 border-primary-500'
+                : 'text-secondary-600 hover:text-secondary-900 hover:bg-secondary-100'
+            }`}
+          >
+            <School size={18} />
+            SIU Guaraní
+          </button>
         </div>
 
         <div className="p-6 md:p-8">
           {activeTab === 'profile' && <ProfileForm />}
           {activeTab === 'plan' && <RoadmapCivil />}
+          {activeTab === 'siu' && <SiuGuaraniTab />}
         </div>
       </div>
     </div>
