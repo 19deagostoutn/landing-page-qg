@@ -1,12 +1,13 @@
 import { LoginButton } from '@/components/ayuda19/login-button'
 import { AlertCircle } from 'lucide-react'
 
-export default function Ayuda19Page({
+export default async function Ayuda19Page({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined }
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
-  const error = searchParams.error
+  const resolvedParams = await searchParams;
+  const error = resolvedParams.error;
 
   return (
     <div className="flex-1 flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-primary-50 via-primary-100 to-secondary-100 w-full p-4 space-y-8">

@@ -14,10 +14,14 @@ export async function updateProfile(formData: FormData) {
     throw new Error('Not authenticated')
   }
 
+  const metadata = user.user_metadata || {}
+  const fullName = metadata.full_name || metadata.name || metadata.given_name || ''
+  const email = user.email || ''
+
   const profileData = {
     id: user.id,
-    first_name: formData.get('firstName') as string,
-    last_name: formData.get('lastName') as string,
+    full_name: fullName,
+    email: email,
     legajo: formData.get('legajo') as string,
     carrera: formData.get('carrera') as string,
     updated_at: new Date().toISOString(),

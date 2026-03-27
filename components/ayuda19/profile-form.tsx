@@ -11,13 +11,15 @@ export function ProfileForm() {
   const [isFetching, setIsFetching] = useState(true)
   const [message, setMessage] = useState('')
   const [profile, setProfile] = useState<any>(null)
-  
+  const [sessionUser, setSessionUser] = useState<any>(null)
+
   const supabase = createClient()
 
   useEffect(() => {
     async function loadProfile() {
       const { data: { user } } = await supabase.auth.getUser()
       if (user) {
+        setSessionUser(user)
         const { data } = await supabase
           .from('students_profiles')
           .select('*')
@@ -30,13 +32,16 @@ export function ProfileForm() {
     loadProfile()
   }, [])
 
+  const metadata = sessionUser?.user_metadata || {}
+  const fullName = metadata.full_name || metadata.name || metadata.given_name || ''
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsLoading(true)
     setMessage('')
     const formData = new FormData(e.currentTarget)
     const result = await updateProfile(formData)
-    
+
     if (result?.error) {
       setMessage('Hubo un error al guardar.')
     } else {
@@ -52,28 +57,16 @@ export function ProfileForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-6 max-w-xl">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="space-y-2">
-          <label htmlFor="firstName" className="text-sm font-medium text-secondary-700">Nombre</label>
+        <div className="space-y-2 md:col-span-2">
+          <label className="text-sm font-medium text-secondary-700">Nombre y Apellido</label>
           <input
-            id="firstName"
-            name="firstName"
-            required
-            defaultValue={profile?.first_name || ''}
-            className="flex h-10 w-full rounded-md border border-secondary-300 bg-white px-3 py-2 text-sm placeholder:text-secondary-400 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent"
-          />
-        </div>
-        <div className="space-y-2">
-          <label htmlFor="lastName" className="text-sm font-medium text-secondary-700">Apellido</label>
-          <input
-            id="lastName"
-            name="lastName"
-            required
-            defaultValue={profile?.last_name || ''}
-            className="flex h-10 w-full rounded-md border border-secondary-300 bg-white px-3 py-2 text-sm placeholder:text-secondary-400 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent"
+            disabled
+            value={fullName}
+            className="flex h-10 w-full rounded-md border border-secondary-200 bg-secondary-50 px-3 py-2 text-sm text-secondary-500 cursor-not-allowed focus:outline-none"
           />
         </div>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <label htmlFor="legajo" className="text-sm font-medium text-secondary-700">Legajo</label>
