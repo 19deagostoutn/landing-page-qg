@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { updateProfile } from '@/app/Ayuda19/actions'
 import { createClient } from '@/lib/supabase/client'
 import { Loader2 } from 'lucide-react'
+import { useRouter, usePathname } from 'next/navigation'
 
 export function ProfileForm() {
   const [isLoading, setIsLoading] = useState(false)
@@ -14,6 +15,8 @@ export function ProfileForm() {
   const [sessionUser, setSessionUser] = useState<any>(null)
 
   const supabase = createClient()
+  const router = useRouter()
+  const pathname = usePathname()
 
   useEffect(() => {
     async function loadProfile() {
@@ -46,6 +49,9 @@ export function ProfileForm() {
       setMessage('Hubo un error al guardar.')
     } else {
       setMessage('Tus datos se guardaron correctamente.')
+      if (pathname?.includes('onboarding')) {
+        router.push('/Ayuda19/dashboard')
+      }
     }
     setIsLoading(false)
   }

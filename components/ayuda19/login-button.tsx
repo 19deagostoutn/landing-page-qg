@@ -24,10 +24,10 @@ export function LoginButton() {
   }
 
   return (
-    <Button 
-      onClick={handleLogin} 
-      disabled={isLoading} 
-      size="lg" 
+    <Button
+      onClick={handleLogin}
+      disabled={isLoading}
+      size="lg"
       className="bg-primary-500 text-secondary-800 hover:bg-primary-600 font-semibold w-full sm:w-auto flex items-center gap-2"
     >
       {isLoading ? <Loader2 className="animate-spin" /> : null}

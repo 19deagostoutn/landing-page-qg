@@ -6,11 +6,22 @@ import { Menu, X, LogOut, User } from "lucide-react"
 import Link from "next/link"
 import { createClient } from "@/lib/supabase/client"
 
-export function Ayuda19Header() {
+export function Ayuda19Header({ onToggleSidebar }: { onToggleSidebar?: () => void }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
   const [isHovered, setIsHovered] = useState(false)
+  const [userName, setUserName] = useState<string>("Portal Estudiante")
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const supabase = createClient()
+
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data }) => {
+      if (data?.user) {
+        const meta = data.user.user_metadata
+        setUserName(meta?.given_name || (meta?.full_name ? meta.full_name.split(' ')[0] : "Estudiante"))
+      }
+    })
+  }, [])
 
   useEffect(() => {
     let lastScrollY = window.scrollY
@@ -58,29 +69,54 @@ export function Ayuda19Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2 md:space-x-3 min-w-0 flex-1 md:flex-initial">
+            {onToggleSidebar && (
+              <button 
+                onClick={onToggleSidebar} 
+                className="hidden md:flex p-2 hover:bg-secondary-100 rounded-lg text-secondary-600 focus:outline-none transition-colors mr-2"
+                title="Alternar panel"
+              >
+                <Menu className="w-5 h-5" />
+              </button>
+            )}
             <Link href="/">
               <img src="/logo-19-agosto.png" alt="19 de Agosto" className="h-8 md:h-12 w-auto flex-shrink-0" />
             </Link>
-            <div className="text-primary font-bold text-sm md:text-xl truncate">19 de Agosto</div>
-            <div className="text-secondary-600 font-semibold text-sm md:text-lg ml-2 border-l border-secondary-300 pl-2">
+            <div className="text-secondary-600 font-semibold text-sm md:text-lg ml-2 border-l border-secondary-300 pl-3">
               AYUDA19
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
-            <div className="flex items-center space-x-2 text-secondary-600 bg-secondary-100 px-3 py-1 rounded-full text-sm font-medium">
-                <User size={16} /> {/* Decorative placeholder */}
-                <span>Portal Estudiante</span>
+            <div className="relative">
+              <button 
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="flex items-center space-x-2 text-secondary-700 hover:text-secondary-900 bg-secondary-50 hover:bg-secondary-100 transition-colors px-4 py-2 rounded-full text-sm font-medium border border-secondary-200 cursor-pointer focus:outline-none"
+              >
+                  <User size={16} className="text-primary-500" />
+                  <span>{userName}</span>
+              </button>
+              
+              {isDropdownOpen && (
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-1 border border-secondary-200 flex flex-col z-50 overflow-hidden">
+                  <Link 
+                    href="/Ayuda19/perfil" 
+                    className="px-4 py-3 hover:bg-secondary-50 text-secondary-700 text-sm font-medium flex items-center gap-2 transition-colors"
+                    onClick={() => setIsDropdownOpen(false)}
+                  >
+                    <User size={16} />
+                    Mi Perfil
+                  </Link>
+                  <button 
+                    onClick={handleLogout}
+                    className="px-4 py-3 hover:bg-red-50 text-red-600 w-full text-left text-sm font-medium flex items-center gap-2 transition-colors border-t border-secondary-100"
+                  >
+                    <LogOut size={16} />
+                    Cerrar sesión
+                  </button>
+                </div>
+              )}
             </div>
-            <Button
-                variant="outline"
-                size="sm"
-                onClick={handleLogout}
-                className="text-red-600 border-red-200 hover:bg-red-50 gap-2"
-            >
-                <LogOut size={16} /> Cerrar Sesión
-            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -98,14 +134,21 @@ export function Ayuda19Header() {
         {isMenuOpen && (
           <nav className="lg:hidden mt-4 pb-4 border-t border-border pt-4">
             <div className="flex flex-col space-y-3">
-              <div className="flex items-center space-x-2 text-secondary-600 px-2 py-2 text-sm font-medium">
-                <User size={16} />
-                <span>Portal Estudiante</span>
+              <div className="flex items-center space-x-2 text-secondary-700 px-3 py-2 text-sm font-medium bg-secondary-50 rounded-lg">
+                <User size={16} className="text-primary-500" />
+                <span>{userName}</span>
               </div>
+              <Link
+                  href="/Ayuda19/perfil"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center text-secondary-700 px-3 py-2 text-sm font-medium bg-white rounded-lg border border-secondary-200 shadow-sm transition-colors hover:bg-secondary-50"
+              >
+                  <User size={16} className="mr-2" /> Mi Perfil
+              </Link>
               <Button
                   variant="outline"
                   onClick={handleLogout}
-                  className="w-full text-left text-red-600 border-red-200 justify-start hover:bg-red-50 gap-2"
+                  className="w-full text-left text-red-600 border-red-200 justify-start hover:bg-red-50 gap-2 bg-white mt-2"
               >
                   <LogOut size={16} /> Cerrar Sesión
               </Button>

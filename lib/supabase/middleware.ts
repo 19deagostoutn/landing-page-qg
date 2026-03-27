@@ -36,18 +36,20 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser()
 
-  if (
-    !user &&
-    request.nextUrl.pathname.startsWith('/Ayuda19/dashboard')
-  ) {
+  // Revisa si la ruta es de la app interna de ayudda19 (pero no la raiz del login ni endpoints auth)
+  const isInternalAyuda19Route = request.nextUrl.pathname.startsWith('/Ayuda19/') && 
+                                 !request.nextUrl.pathname.startsWith('/Ayuda19/auth') &&
+                                 request.nextUrl.pathname !== '/Ayuda19'
+
+  if (!user && isInternalAyuda19Route) {
     // no user, potentially respond by redirecting the user to the login page
     const url = request.nextUrl.clone()
     url.pathname = '/Ayuda19'
     return NextResponse.redirect(url)
   }
   
-  // Si hay usuario y quiere acceder al dashboard, verificamos el dominio
-  if (user && request.nextUrl.pathname.startsWith('/Ayuda19/dashboard')) {
+  // Si hay usuario y quiere acceder a herramientas, verificamos el dominio
+  if (user && isInternalAyuda19Route) {
       if (!user.email?.endsWith('@frba.utn.edu.ar')) {
           // Destruir sesion y mandar a unauthorized si el email no es @frba.utn.edu.ar
           await supabase.auth.signOut()
