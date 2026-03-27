@@ -34,7 +34,7 @@ const initialNodes = [
   { id: '12', position: { x: 550, y: 150 }, data: { label: 'Estabilidad II' }, className: 'bg-white border-2 border-blue-400 rounded-md p-3 max-w-[150px] text-center font-medium shadow-sm', type: 'default' },
 ]
 
-const initialEdges = [
+const initialEdges: Edge[] = [
   // AM1 -> AM2, AM1 -> FIS2, AM1 -> MAT SUP
   { id: 'e1-7', source: '1', target: '7', animated: true, style: { stroke: '#9ca3af' } },
   { id: 'e1-8', source: '1', target: '8', animated: true, style: { stroke: '#9ca3af' } },
@@ -47,7 +47,7 @@ const initialEdges = [
   { id: 'e9-12', source: '9', target: '12', animated: true, style: { stroke: '#9ca3af' } },
 ]
 
-export function RoadmapCivil() {
+export function Roadmap({ carrera }: { carrera: string }) {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes)
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges)
 
@@ -59,7 +59,7 @@ export function RoadmapCivil() {
   return (
     <div className="w-full h-full flex flex-col space-y-4">
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-bold text-secondary-800">Plan de Estudios: Ingeniería Civil</h2>
+        <h2 className="text-xl font-bold text-secondary-800">Plan de Estudios: Ingeniería {carrera}</h2>
         <div className="flex items-center gap-4 text-xs font-medium">
           <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-full bg-primary-500"></span>1° Año</div>
           <div className="flex items-center gap-2"><span className="w-3 h-3 rounded-full bg-secondary-400"></span>2° Año</div>
