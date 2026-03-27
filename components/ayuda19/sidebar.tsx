@@ -3,22 +3,11 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { 
-  UserCircle, GraduationCap, School, BookOpen, 
-  MessageCircle, Star, ShoppingBag, LayoutDashboard, Menu 
-} from 'lucide-react'
+import { Menu } from 'lucide-react'
+import { PORTAL_NAV_ITEMS } from '@/components/ayuda19/nav-config'
 import { Button } from '@/components/ui/button'
 
-const NAV_ITEMS = [
-  { href: '/Ayuda19/dashboard', label: 'Inicio', icon: LayoutDashboard },
-  { href: '/Ayuda19/perfil', label: 'Mi Perfil', icon: UserCircle },
-  { href: '/Ayuda19/roadmap', label: 'Seguimiento de Plan', icon: GraduationCap },
-  { href: '/Ayuda19/material', label: 'Material de Estudio', icon: BookOpen },
-  { href: '/Ayuda19/grupos', label: 'Grupos de WhatsApp', icon: MessageCircle },
-  { href: '/Ayuda19/aulas', label: 'Acceso a Aulas (SIU)', icon: School },
-  { href: '#', label: 'Opiniones (Próximamente)', icon: Star, disabled: true },
-  { href: '#', label: 'Tienda (Próximamente)', icon: ShoppingBag, disabled: true },
-]
+
 
 export function Ayuda19Sidebar({ isCollapsed: externalIsCollapsed = false }: { isCollapsed?: boolean }) {
   const pathname = usePathname()
@@ -42,14 +31,14 @@ export function Ayuda19Sidebar({ isCollapsed: externalIsCollapsed = false }: { i
       <aside 
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className={`bg-white border-r border-secondary-200 shadow-sm transition-[width,transform] duration-300 ease-in-out flex flex-col z-40
+        className={`bg-white border-r border-secondary-200 shadow-sm transition-[width,transform] duration-300 ease-in-out flex flex-col z-40 relative
           ${effectiveCollapsed ? 'w-20' : 'w-64 absolute md:relative'} 
           ${isMobileOpen ? 'translate-x-0 fixed inset-y-0 left-0 pt-24 w-64' : '-translate-x-full md:translate-x-0 md:h-[calc(100vh-72px)]'}
         `}
       >
         {/* Navigation Links */}
         <nav className="flex-1 overflow-y-auto py-4 px-3 space-y-1">
-          {NAV_ITEMS.map((item) => {
+          {PORTAL_NAV_ITEMS.map((item) => {
              const Icon = item.icon
              const isActive = pathname === item.href
 
@@ -63,7 +52,7 @@ export function Ayuda19Sidebar({ isCollapsed: externalIsCollapsed = false }: { i
              }
 
              return (
-               <Link 
+               <a 
                  key={item.href} 
                  href={item.href}
                  onClick={() => setIsMobileOpen(false)}
@@ -81,7 +70,7 @@ export function Ayuda19Sidebar({ isCollapsed: externalIsCollapsed = false }: { i
                      {item.label}
                    </span>
                  )}
-               </Link>
+               </a>
              )
           })}
         </nav>

@@ -13,7 +13,7 @@ export function PortalLayoutWrapper({ children }: { children: React.ReactNode })
       <Ayuda19Header onToggleSidebar={() => setIsCollapsed(!isCollapsed)} />
       <div className="flex flex-1 overflow-hidden relative">
         <Ayuda19Sidebar isCollapsed={isCollapsed} />
-        <main className="flex-1 overflow-y-auto p-4 md:p-8 w-full max-w-7xl mx-auto transition-all duration-300">
+        <main className="flex-1 overflow-y-auto p-4 md:p-8 w-full max-w-7xl mx-auto transition-all duration-300 relative z-10">
           {children}
         </main>
       </div>

@@ -1,55 +1,8 @@
-import Link from 'next/link'
-import { GraduationCap, School, UserCircle, BookOpen, MessageCircle, Star, ShoppingBag } from 'lucide-react'
+
+import { PORTAL_NAV_ITEMS } from '@/components/ayuda19/nav-config'
 
 export default function Ayuda19DashboardHub() {
-  const portalLinks = [
-    {
-      href: '/Ayuda19/perfil',
-      label: 'Mi Perfil',
-      icon: <UserCircle className="w-8 h-8 text-primary-500" />,
-      description: 'Gestión de datos de tu cuenta estudiantil.'
-    },
-    {
-      href: '/Ayuda19/roadmap',
-      label: 'Seguimiento de Plan',
-      icon: <GraduationCap className="w-8 h-8 text-primary-500" />,
-      description: 'Roadmap interactivo para ver tu avance.'
-    },
-    {
-      href: '/Ayuda19/aulas',
-      label: 'Acceso a Aulas (SIU)',
-      icon: <School className="w-8 h-8 text-primary-500" />,
-      description: 'Links directos a campus virtual y guaraní.'
-    },
-    {
-      href: '#',
-      label: 'Material de Estudio',
-      icon: <BookOpen className="w-8 h-8 text-primary-500" />,
-      description: 'Próximamente: Resúmenes y apuntes.',
-      disabled: true
-    },
-    {
-      href: '#',
-      label: 'Grupos de WhatsApp',
-      icon: <MessageCircle className="w-8 h-8 text-primary-500" />,
-      description: 'Próximamente: Enlaces por materias.',
-      disabled: true
-    },
-    {
-      href: '#',
-      label: 'Opiniones de Profesores',
-      icon: <Star className="w-8 h-8 text-primary-500" />,
-      description: 'Próximamente: Sistema de reseñas.',
-      disabled: true
-    },
-    {
-      href: '#',
-      label: 'Tienda Online',
-      icon: <ShoppingBag className="w-8 h-8 text-primary-500" />,
-      description: 'Próximamente: Merchandising.',
-      disabled: true
-    }
-  ]
+  const portalLinks = PORTAL_NAV_ITEMS.filter(link => link.href !== '/Ayuda19/dashboard')
 
   return (
     <div className="space-y-8">
@@ -60,11 +13,12 @@ export default function Ayuda19DashboardHub() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {portalLinks.map((link, idx) => {
+           const Icon = link.icon
            if (link.disabled) {
              return (
                <div key={idx} className="bg-white/50 border border-secondary-200 rounded-xl p-6 flex flex-col items-start gap-4 opacity-75 cursor-not-allowed">
                  <div className="p-3 bg-secondary-100 rounded-lg grayscale">
-                   {link.icon}
+                   <Icon className="w-8 h-8 text-secondary-400" />
                  </div>
                  <div>
                    <h3 className="text-lg font-semibold text-secondary-800">{link.label}</h3>
@@ -75,16 +29,17 @@ export default function Ayuda19DashboardHub() {
            }
 
            return (
-             <Link key={idx} href={link.href} className="bg-white border border-secondary-200 rounded-xl p-6 flex flex-col items-start gap-4 transition-all hover:shadow-md hover:border-primary-400 group">
+             <a key={idx} href={link.href} className="bg-white border border-secondary-200 rounded-xl p-6 flex flex-col items-start gap-4 transition-all hover:shadow-md hover:border-primary-400 group">
                <div className="p-3 bg-primary-50 rounded-lg group-hover:bg-primary-100 transition-colors">
-                 {link.icon}
+                 <Icon className="w-8 h-8 text-primary-500" />
                </div>
                <div>
                  <h3 className="text-lg font-semibold text-secondary-800">{link.label}</h3>
                  <p className="text-sm text-secondary-600 mt-1">{link.description}</p>
                </div>
-             </Link>
+             </a>
            )
+
         })}
       </div>
     </div>

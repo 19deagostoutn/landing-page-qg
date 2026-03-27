@@ -30,7 +30,9 @@ export function Ayuda19Header({ onToggleSidebar }: { onToggleSidebar?: () => voi
       const currentScrollY = window.scrollY
       if (currentScrollY > 100) {
         if (currentScrollY > lastScrollY && !isHovered) {
-          setIsVisible(false)
+          setIsVisible(false) // Scroll down hides it
+        } else if (currentScrollY < lastScrollY) {
+          setIsVisible(true) // Scroll up shows it
         }
       } else {
         setIsVisible(true)
@@ -99,14 +101,14 @@ export function Ayuda19Header({ onToggleSidebar }: { onToggleSidebar?: () => voi
               
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-1 border border-secondary-200 flex flex-col z-50 overflow-hidden">
-                  <Link 
+                  <a 
                     href="/Ayuda19/perfil" 
                     className="px-4 py-3 hover:bg-secondary-50 text-secondary-700 text-sm font-medium flex items-center gap-2 transition-colors"
                     onClick={() => setIsDropdownOpen(false)}
                   >
                     <User size={16} />
                     Mi Perfil
-                  </Link>
+                  </a>
                   <button 
                     onClick={handleLogout}
                     className="px-4 py-3 hover:bg-red-50 text-red-600 w-full text-left text-sm font-medium flex items-center gap-2 transition-colors border-t border-secondary-100"
@@ -138,13 +140,13 @@ export function Ayuda19Header({ onToggleSidebar }: { onToggleSidebar?: () => voi
                 <User size={16} className="text-primary-500" />
                 <span>{userName}</span>
               </div>
-              <Link
+              <a
                   href="/Ayuda19/perfil"
                   onClick={() => setIsMenuOpen(false)}
                   className="flex items-center text-secondary-700 px-3 py-2 text-sm font-medium bg-white rounded-lg border border-secondary-200 shadow-sm transition-colors hover:bg-secondary-50"
               >
                   <User size={16} className="mr-2" /> Mi Perfil
-              </Link>
+              </a>
               <Button
                   variant="outline"
                   onClick={handleLogout}
