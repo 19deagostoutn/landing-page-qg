@@ -95,12 +95,13 @@ export function ProfileForm() {
           >
             <option value="" disabled>Seleccioná tu carrera...</option>
             <option value="Civil">Ingeniería Civil</option>
-            <option value="Química">Ingeniería Química</option>
+            <option value="Eléctrica">Ingeniería Eléctrica</option>
+            <option value="Electrónica">Ingeniería Electrónica</option>
             <option value="Industrial">Ingeniería Industrial</option>
             <option value="Mecánica">Ingeniería Mecánica</option>
             <option value="Naval">Ingeniería Naval</option>
-            <option value="Electrónica">Ingeniería Electrónica</option>
-            <option value="Eléctrica">Ingeniería Eléctrica</option>
+            <option value="Química">Ingeniería Química</option>
+            <option value="Sistemas">Ingeniería en Sistemas</option>
             <option value="Textil">Ingeniería Textil</option>
           </select>
         </div>
