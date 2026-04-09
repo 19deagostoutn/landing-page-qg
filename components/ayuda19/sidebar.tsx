@@ -31,9 +31,10 @@ export function Ayuda19Sidebar({ isCollapsed: externalIsCollapsed = false }: { i
       <aside 
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        className={`bg-white border-r border-secondary-200 shadow-sm transition-[width,transform] duration-300 ease-in-out flex flex-col z-40 relative
-          ${effectiveCollapsed ? 'w-20' : 'w-64 absolute md:relative'} 
-          ${isMobileOpen ? 'translate-x-0 fixed inset-y-0 left-0 pt-24 w-64' : '-translate-x-full md:translate-x-0 md:h-[calc(100vh-72px)]'}
+        className={`bg-white border-r border-secondary-200 shadow-sm transition-[width,transform] duration-300 ease-in-out flex flex-col z-40
+          fixed inset-y-0 left-0 pt-[72px]
+          ${effectiveCollapsed ? 'w-16 md:w-20' : 'w-64'} 
+          ${isMobileOpen ? 'translate-x-0 w-64' : '-translate-x-full md:translate-x-0'}
         `}
       >
         {/* Navigation Links */}

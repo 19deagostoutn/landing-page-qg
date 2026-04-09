@@ -64,16 +64,15 @@ export function Ayuda19Header({ onToggleSidebar }: { onToggleSidebar?: () => voi
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border transition-transform duration-300 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="w-full px-4 md:px-5 py-3 md:py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2 md:space-x-3 min-w-0 flex-1 md:flex-initial">
             {onToggleSidebar && (
-              <button 
-                onClick={onToggleSidebar} 
+              <button
+                onClick={onToggleSidebar}
                 className="hidden md:flex p-2 hover:bg-secondary-100 rounded-lg text-secondary-600 focus:outline-none transition-colors mr-2"
                 title="Alternar panel"
               >
@@ -91,25 +90,25 @@ export function Ayuda19Header({ onToggleSidebar }: { onToggleSidebar?: () => voi
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">
             <div className="relative">
-              <button 
+              <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="flex items-center space-x-2 text-secondary-700 hover:text-secondary-900 bg-secondary-50 hover:bg-secondary-100 transition-colors px-4 py-2 rounded-full text-sm font-medium border border-secondary-200 cursor-pointer focus:outline-none"
               >
-                  <User size={16} className="text-primary-500" />
-                  <span>{userName}</span>
+                <User size={16} className="text-primary-500" />
+                <span>{userName}</span>
               </button>
-              
+
               {isDropdownOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-1 border border-secondary-200 flex flex-col z-50 overflow-hidden">
-                  <a 
-                    href="/Ayuda19/perfil" 
+                  <a
+                    href="/Ayuda19/perfil"
                     className="px-4 py-3 hover:bg-secondary-50 text-secondary-700 text-sm font-medium flex items-center gap-2 transition-colors"
                     onClick={() => setIsDropdownOpen(false)}
                   >
                     <User size={16} />
                     Mi Perfil
                   </a>
-                  <button 
+                  <button
                     onClick={handleLogout}
                     className="px-4 py-3 hover:bg-red-50 text-red-600 w-full text-left text-sm font-medium flex items-center gap-2 transition-colors border-t border-secondary-100"
                   >
@@ -141,18 +140,18 @@ export function Ayuda19Header({ onToggleSidebar }: { onToggleSidebar?: () => voi
                 <span>{userName}</span>
               </div>
               <a
-                  href="/Ayuda19/perfil"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center text-secondary-700 px-3 py-2 text-sm font-medium bg-white rounded-lg border border-secondary-200 shadow-sm transition-colors hover:bg-secondary-50"
+                href="/Ayuda19/perfil"
+                onClick={() => setIsMenuOpen(false)}
+                className="flex items-center text-secondary-700 px-3 py-2 text-sm font-medium bg-white rounded-lg border border-secondary-200 shadow-sm transition-colors hover:bg-secondary-50"
               >
-                  <User size={16} className="mr-2" /> Mi Perfil
+                <User size={16} className="mr-2" /> Mi Perfil
               </a>
               <Button
-                  variant="outline"
-                  onClick={handleLogout}
-                  className="w-full text-left text-red-600 border-red-200 justify-start hover:bg-red-50 gap-2 bg-white mt-2"
+                variant="outline"
+                onClick={handleLogout}
+                className="w-full text-left text-red-600 border-red-200 justify-start hover:bg-red-50 gap-2 bg-white mt-2"
               >
-                  <LogOut size={16} /> Cerrar Sesión
+                <LogOut size={16} /> Cerrar Sesión
               </Button>
             </div>
           </nav>
